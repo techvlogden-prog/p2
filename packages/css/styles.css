@@ -495,7 +495,8 @@ img {
 }
 
 .skills__title {
-  font-size: var(--h3-font-size);
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .skills__subtitle {
@@ -509,7 +510,7 @@ img {
 }
 
 .skills__list {
-  row-gap: 1.5rem;
+  row-gap: 2rem;
   padding-left: 2.7rem;
 }
 
@@ -520,18 +521,34 @@ img {
 }
 
 .skills__name {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.skills__content{
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  margin-bottom: 1.5rem;
 }
 
 .skills__bar,
 .skills__percentage {
-  height: 5px;
-  border-radius: 0.25rem;
+  height: 8px;
+  border-radius: 1rem;
 }
 
 .skills__bar {
   background-color: var(--first-color-lighter);
+}
+
+.skills__data{
+  transition: 0.3s ease;
+}
+
+.skills__data:hover{
+  transform: translateX(6px);
 }
 
 .skills__percentage {
