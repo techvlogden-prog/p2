@@ -556,6 +556,13 @@ img {
   background-color: var(--first-color);
 }
 
+.skills__number{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--first-color);
+    letter-spacing: 0.5px;
+}
+
 .skills__html {
   width: 90%;
 }
