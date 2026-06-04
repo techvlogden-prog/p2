@@ -414,11 +414,10 @@ img {
 }
 
 /*==================== ABOUT ====================*/
-.about__img {
-  width: 200px;
-  border-radius: 0.5rem;
-  justify-self: center;
-  align-items: center;
+
+.about__img{
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .about__description {
