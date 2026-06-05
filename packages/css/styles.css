@@ -713,8 +713,9 @@ img {
 
 /*==================== Areas of Expertise ====================*/
 .AreasofExpertise__container {
-  gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .AreasofExpertise__content {
