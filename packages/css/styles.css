@@ -711,13 +711,13 @@ img {
   color: var(--first-color);
 }
 
-/*==================== SERVICES ====================*/
-.services__container {
+/*==================== Areas of Expertise ====================*/
+.AreasofExpertise__container {
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.services__content {
+.AreasofExpertise__content {
   position: relative;
   background-color: var(--container-color);
   padding: 3.5rem 0.5rem 1.25rem 1.5rem;
@@ -726,33 +726,33 @@ img {
   transition: 0.3s;
 }
 
-.services__content:hover {
+.AreasofExpertise__content:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.services__icon {
+.AreasofExpertise__icon {
   display: block;
   font-size: 1.5rem;
   color: var(--first-color);
   margin-bottom: var(--mb-1);
 }
 
-.services__title {
+.AreasofExpertise__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
 }
 
-.services__button {
+.AreasofExpertise__button {
   cursor: pointer;
   font-size: var(--small-font-size);
 }
 
-.services__button:hover .button__icon {
+.AreasofExpertise__button:hover .button__icon {
   transform: translateX(0.25rem);
 }
 
-.services__modal {
+.AreasofExpertise__modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -769,28 +769,28 @@ img {
   transition: 0.3s;
 }
 
-.services__modal-content {
+.AreasofExpertise__modal-content {
   position: relative;
   background-color: var(--container-color);
   padding: 1.5rem;
   border-radius: 0.5rem;
 }
 
-.services__modal-services {
+.AreasofExpertise__modal-AreasofExpertise {
   row-gap: 1rem;
 }
 
-.services__modal-service {
+.AreasofExpertise__modal-service {
   display: flex;
 }
 
-.services__modal-title {
+.AreasofExpertise__modal-title {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1-5);
 }
 
-.services__modal-close {
+.AreasofExpertise__modal-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -799,7 +799,7 @@ img {
   cursor: pointer;
 }
 
-.services__modal-icon {
+.AreasofExpertise__modal-icon {
   color: var(--first-color);
   margin-right: var(--mb-0-25);
 }
@@ -1104,15 +1104,15 @@ img {
     gap: 0.5rem;
   }
 
-  .services__container {
+  .AreasofExpertise__container {
     grid-template-columns: max-content;
     justify-content: center;
   }
 
-  .services__content {
+  .AreasofExpertise__content {
     padding-right: 3.5rem;
   }
-  .services__modal {
+  .AreasofExpertise__modal {
     padding: 0 0.5rem;
   }
 
@@ -1256,18 +1256,18 @@ img {
     .qualification__sections {
       grid-template-columns: 0.5fr;
     }
-    .services__container {
+    .AreasofExpertise__container {
       grid-template-columns: repeat(3, 218px);
       justify-content: center;
     }
-    .services__icon {
+    .AreasofExpertise__icon {
       font-size: 2rem;
     }
-    .services__content {
+    .AreasofExpertise__content {
       padding: 6rem 0 2rem 2.5rem;
     }
 
-    .services__modal-content {
+    .AreasofExpertise__modal-content {
       width: 450px;
     }
     .portfolio__img {
@@ -1329,7 +1329,7 @@ img {
   .home__social {
     transform: translateX(-6rem);
   }
-  .services__container {
+  .AreasofExpertise__container {
     grid-template-columns: repeat(3, 238px);
   }
   .portfolio__content {
