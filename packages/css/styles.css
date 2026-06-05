@@ -743,6 +743,13 @@ img {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
+.AreasofExpertise__title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
 
 .AreasofExpertise__button {
     font-size: 0.9rem;
