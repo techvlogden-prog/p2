@@ -738,13 +738,13 @@ img {
 }
 
 .AreasofExpertise__icon {
-    font-size: 2.2rem;
+    font-size: 1.5 rem;
     color: var(--first-color);
     margin-bottom: 1.5rem;
 }
 
 .AreasofExpertise__title {
-    font-size: 2 rem;
+    font-size: 1.3 rem;
     font-weight: 600;
     line-height: 1.5;
     margin-bottom: 1rem;
