@@ -713,52 +713,55 @@ img {
 
 /*==================== Areas of Expertise ====================*/
 .AreasofExpertise__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
 }
 
 .AreasofExpertise__content {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 1rem;
-  min-height: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 8px 20px rgba(0,0,0,.08);
-  transition: all .3s ease;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+    border: 1px solid rgba(91,194,216,0.08);
 }
 
 .AreasofExpertise__content:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0,0,0,.15);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-.AreasofExpertise__icon{
-    font-size: 2.5rem;
+.AreasofExpertise__icon {
+    font-size: 2.2rem;
     color: var(--first-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .AreasofExpertise__title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-  color: var(--title-color);
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
-.AreasofExpertise__button{
+.AreasofExpertise__button {
     display: inline-flex;
     align-items: center;
     gap: .5rem;
+    font-size: .95rem;
     font-weight: 600;
     color: var(--first-color);
+    transition: .3s;
 }
 
-.AreasofExpertise__button:hover .button__icon {
-  transform: translateX(0.25rem);
+.AreasofExpertise__button:hover {
+    gap: .8rem;
 }
 
 .AreasofExpertise__modal {
@@ -779,6 +782,7 @@ img {
   background: #fff;
   width: 500px;
   max-width: 90%;
+  min-height: 350px;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 20px 40px rgba(0,0,0,.15);
@@ -791,8 +795,8 @@ img {
 .AreasofExpertise__modal-service {
   display: flex;
   align-items: flex-start;
-  gap: .75rem;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .AreasofExpertise__modal-service p {
@@ -800,9 +804,9 @@ img {
 }
 
 .AreasofExpertise__modal-title {
-  font-size: 1rem;
-  font-weight: 200;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 .AreasofExpertise__modal-close {
