@@ -718,21 +718,21 @@ img {
   gap: 2rem;
 }
 
-.AreasofExpertise__content{
-    background: #fff;
-    padding: 2rem;
-    border-radius: 1rem;
-    min-height: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 8px 25px rgba(0,0,0,.08);
-    transition: all .3s ease;
+.AreasofExpertise__content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  transition: all .3s ease;
 }
 
-.AreasofExpertise__content:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+.AreasofExpertise__content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.15);
 }
 
 .AreasofExpertise__icon{
@@ -741,11 +741,12 @@ img {
     margin-bottom: 1rem;
 }
 
-.AreasofExpertise__title{
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.4;
-    margin-bottom: 1rem;
+.AreasofExpertise__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: var(--title-color);
 }
 
 .AreasofExpertise__button{
@@ -779,9 +780,12 @@ img {
 
 .AreasofExpertise__modal-content {
   position: relative;
-  background-color: var(--container-color);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
+  background: #fff;
+  width: 500px;
+  max-width: 90%;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
 }
 
 .AreasofExpertise__modal-AreasofExpertise {
@@ -790,12 +794,19 @@ img {
 
 .AreasofExpertise__modal-service {
   display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+
+.AreasofExpertise__modal-service p {
+  line-height: 1.7;
 }
 
 .AreasofExpertise__modal-title {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: var(--mb-1-5);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 .AreasofExpertise__modal-close {
