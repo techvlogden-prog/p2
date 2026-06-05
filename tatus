@@ -1,0 +1,23 @@
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 1cf71a6..30ef877 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -494,7 +494,7 @@[m
+             </div>[m
+             <span class="button button--flex button--small button--link Areas of Expertise__button">[m
+                 View more[m
+[31m-<i class="uil uil-arrow-right button__icon"></i>[m
+[32m+[m[32m                <i class="uil uil-arrow-right button__icon"></i>[m
+             </span>[m
+ [m
+             <div class="Areas of Expertise__modal">[m
+[36m@@ -566,7 +566,7 @@[m
+             </div>[m
+             <span class="button button--flex button--small button--link Areas of Expertise__button">[m
+                 View more[m
+[31m-<i class="uil uil-arrow-right button__icon"></i>[m
+[32m+[m[32m               <i class="uil uil-arrow-right button__icon"></i>[m
+             </span>[m
+ [m
+             <div class="Areas of Expertise__modal">[m
