@@ -716,13 +716,14 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    font-size: 1.5 rem;
+    
     align-items: stretch;
 }
 
 .AreasofExpertise__content {
     background: #fff;
     padding: 2rem;
+    font-size: 1.5 rem;
     border-radius: 1.25rem;
     min-height: 320px;
     display: flex;
