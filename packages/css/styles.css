@@ -82,6 +82,10 @@ body.dark-theme {
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
+body.dark-theme .header{
+    background: rgba(7, 27, 36, 0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
 
 /*========== Button Dark/Light ==========*/
 .nav__btns {
@@ -178,10 +182,15 @@ img {
 .header {
   width: 100%;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 /*==================== NAV ====================*/
@@ -236,10 +245,11 @@ img {
   align-items: center;
   font-size: var(--small-font-size);
   color: var(--title-color);
-  font-weight: var(--font-medium);
+  font-weight: 600;
+  transition: .3s;
 }
 
-.nav__link:hover {
+.nav__link:hover{
   color: var(--first-color);
 }
 
