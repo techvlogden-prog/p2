@@ -1658,3 +1658,16 @@ body.dark-theme .cert-gallery-card{
     border: 1px solid rgba(255,255,255,.05);
     box-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
+/* Board Certifications - Dark Mode Fix */
+body.dark-theme .section-title,
+body.dark-theme .cert-title {
+    color: #FFFFFF !important;
+}
+
+body.dark-theme .section-description {
+    color: #CBD5E1 !important;
+}
+
+body.dark-theme .section-subtitle {
+    color: #5BC2D8 !important;
+}
