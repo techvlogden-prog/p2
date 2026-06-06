@@ -1,5 +1,5 @@
 /* ==================== GOOGLE FONTS ====================*/
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -10,22 +10,21 @@
   --hue-color: 190; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
   /* HSL color mode */
-  --first-color:#0EA5E9;
+  --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
-  --first-color-alt:#0284C7;
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-  --title-color:#0F172A;
-  --text-color:#64748B;
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color:#F8FAFC;
-  --container-color:#FFFFFF;
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
   /*========== Font and typography ==========*/
-  --body-font:'Outfit',sans-serif;
-
+  --body-font: "Poppins", sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
@@ -73,19 +72,15 @@
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
   /* HSL color mode */
-    --first-color:#5BC2D8;
-  --title-color:#FFFFFF;
-  --text-color:#CBD5E1;
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 75%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color:#071B24;
-  --container-color:#102A36;
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hsl(var(--hue-color), 29%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-}
-body.dark-theme .header{
-    background: rgba(7, 27, 36, 0.85);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -152,11 +147,8 @@ img {
   margin-bottom: 40px;
 }
 
-.section__title{
-   font-size: 3rem;
-   font-weight: 800;
-   letter-spacing:-1px;
-   margin-bottom:.5rem;
+.section__title {
+  font-size: var(--h1-font-size);
 }
 
 .section__subtitle {
@@ -186,15 +178,10 @@ img {
 .header {
   width: 100%;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background-color: var(--body-color);
 }
 
 /*==================== NAV ====================*/
@@ -249,10 +236,10 @@ img {
   align-items: center;
   font-size: var(--small-font-size);
   color: var(--title-color);
-  font-weight: 600;
-  transition: .3s;
+  font-weight: var(--font-medium);
+}
 
-.nav__link:hover{
+.nav__link:hover {
   color: var(--first-color);
 }
 
@@ -333,13 +320,12 @@ img {
   grid-column: 1/3;
 }
 
-.home__title{
-    font-size:4.5rem;
-    font-weight:800;
-    line-height:1.1;
+.home__title {
+  font-size: var(--big-font-size);
 }
+
 .home__subtitle {
-  font-size:1.4rem;
+  font-size: var(--h3-font-size);
   color: var(--text-color);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-75);
@@ -380,22 +366,15 @@ img {
 
 .button {
   display: inline-block;
-  background: linear-gradient(
-      135deg,
-      #5BC2D8,
-      #0EA5E9
-  );
-  color: #fff;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  font-weight: 600;
-  box-shadow: 0 8px 20px rgba(14,165,233,.25);
-  transition: all .3s ease;
+  background-color: var(--first-color);
+  color: #ffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
 }
 
 .button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(14,165,233,.35);
+  background-color: var(--first-color-alt);
 }
 
 .button__icon {
@@ -740,22 +719,13 @@ img {
     
     align-items: stretch;
 }
-.AreasofExpertise__title{
-    font-size:1.35rem;
-    font-weight:700;
-    line-height:1.4;
-}
-.AreasofExpertise__content:hover{
-    transform:translateY(-10px);
-    border-color:#5BC2D8;
-}
 
 .AreasofExpertise__content {
     background: #fff;
     padding: 2rem;
     font-size: 1.5 rem;
-    border-radius: 20px;
-    min-height: 260px;
+    border-radius: 1.25rem;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -851,219 +821,100 @@ img {
 
 /*==================== BOARD CERTIFICATIONS ====================*/
 
-.certifications-card{
-    max-width: 1200px;
-    margin: 4rem auto;
-    background: #eef5f7;
-    padding: 4rem 3rem;
-    border-radius: 24px;
+.certifications-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    margin-bottom: 4rem;
 }
 
-.cert-title{
-    text-align: center;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 3rem;
-}
-
-.cert-grid{
+.cert-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 3rem;
+    gap: 2rem;
 }
 
-.cert-column{
+.cert-column {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
-.cert-item{
+.cert-item {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
 }
 
-.cert-dot{
+.cert-dot {
     width: 12px;
     height: 12px;
-    background: #3db5c8;
     border-radius: 50%;
+    background: #5BC2D8;
     margin-top: 10px;
     flex-shrink: 0;
 }
 
-.cert-content h4{
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #0f172a;
-    line-height: 1.5;
-    margin-bottom: .5rem;
-}
-
-.cert-content span{
-    display: block;
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #64748b;
-}
-
-/* Responsive */
-
-@media screen and (max-width:768px){
-
-    .cert-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .certifications-card{
-        padding: 2rem;
-    }
-
-    .cert-title{
-        font-size: 1.8rem;
-    }
-}
-/*==================== CERTIFICATE GALLERY ====================*/
-
-#certifications{
-    padding: 6rem 0;
-}
-
-#certifications .container{
-    max-width: 1280px;
-    margin: auto;
-    padding: 0 1.5rem;
-}
-
-/* Header */
-
-.section-header{
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-subtitle{
-    display: inline-block;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #5BC2D8;
-    margin-bottom: 1rem;
-}
-
-.section-title{
-    font-size: 3rem;
-    font-weight: 700;
-    color: #0F172A;
-    margin-bottom: 1rem;
-    letter-spacing: -1px;
-}
-
-.section-description{
-    max-width: 700px;
-    margin: auto;
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #64748B;
-}
-
-/* Grid */
-
-.cert-gallery-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-}
-
-/* Card */
-
-.cert-gallery-card{
-    background: #fff;
-    border: 1px solid #E2E8F0;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all .35s ease;
-    box-shadow: 0 4px 20px rgba(0,0,0,.04);
-}
-
-.cert-gallery-card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,.10);
-}
-
-/* Image */
-
-.cert-gallery-image-wrapper{
-    height: 260px;
-    background: #F8FAFC;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-
-.cert-gallery-image{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform .4s ease;
-}
-
-.cert-gallery-card:hover .cert-gallery-image{
-    transform: scale(1.04);
-}
-
-/* Caption */
-
-.cert-gallery-caption{
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.cert-gallery-caption h3{
-    font-size: 1.2rem;
+.cert-content h4 {
+    font-size: 1.1rem;
     font-weight: 600;
-    color: #0F172A;
     margin-bottom: .5rem;
-    line-height: 1.4;
 }
 
-.cert-gallery-caption p{
-    font-size: 0.95rem;
-    color: #64748B;
+.cert-content span {
+    color: #6c757d;
     line-height: 1.6;
 }
 
-/* Responsive */
+/*==================== CERTIFICATE GALLERY ====================*/
 
-@media screen and (max-width: 992px){
-
-    .cert-gallery-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .section-title{
-        font-size: 2.5rem;
-    }
+.cert-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 2rem;
 }
 
-@media screen and (max-width: 576px){
+.cert-gallery-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    cursor: pointer;
+    transition: .3s;
+}
 
-    .cert-gallery-grid{
-        grid-template-columns: 1fr;
-    }
+.cert-gallery-card:hover {
+    transform: translateY(-8px);
+}
 
-    .section-title{
-        font-size: 2rem;
-    }
+.cert-gallery-image-wrapper {
+    height: 220px;
+    overflow: hidden;
+}
 
-    .cert-gallery-image-wrapper{
-        height: 220px;
-    }
+.cert-gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.cert-gallery-card:hover .cert-gallery-image {
+    transform: scale(1.05);
+}
+
+.cert-gallery-caption {
+    padding: 1rem;
+}
+
+.cert-gallery-caption h3 {
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+
+.cert-gallery-caption p {
+    color: #6c757d;
 }
 
 /*==================== LIGHTBOX ====================*/
@@ -1110,8 +961,6 @@ img {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
-
 /*==================== PORTFOLIO ====================*/
 .portfolio__container {
   overflow: initial;
@@ -1269,12 +1118,9 @@ img {
   row-gap: 3.5rem;
 }
 
-.footer__bg{
-    background:#071B24;
-    border-top:1px solid rgba(255,255,255,.08);
-}
-.footer__bg{
-    background:#0F172A;
+.footer__bg {
+  background-color: var(--first-color-second);
+  padding: 2rem 0 3rem;
 }
 
 .footer__title {
