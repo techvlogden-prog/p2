@@ -869,10 +869,10 @@ img {
 
 /*==================== CERTIFICATE GALLERY ====================*/
 
-.cert-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-    gap: 2rem;
+.cert-gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:2rem;
 }
 
 .cert-gallery-card {
@@ -888,16 +888,16 @@ img {
     transform: translateY(-8px);
 }
 
-.cert-gallery-image-wrapper {
-    height: 220px;
-    overflow: hidden;
+.cert-gallery-image-wrapper{
+    height:300px;
+    overflow:hidden;
 }
 
-.cert-gallery-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .4s;
+.cert-gallery-image{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    background:#fff;
 }
 
 .cert-gallery-card:hover .cert-gallery-image {
@@ -915,6 +915,14 @@ img {
 
 .cert-gallery-caption p {
     color: #6c757d;
+}
+.certifications-card{
+    max-width:1200px;
+    margin:0 auto 4rem auto;
+}
+#certifications .container{
+    max-width:1200px;
+    margin:auto;
 }
 
 /*==================== LIGHTBOX ====================*/
