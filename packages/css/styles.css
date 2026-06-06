@@ -19,7 +19,7 @@
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
-  --container-color: #fff;
+  --container-color: hsl(var(--hue-color), 60%, 99%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
@@ -70,17 +70,19 @@
 }
 
 /*========== Variables Dark theme ==========*/
-body.dark-theme {
-  /* HSL color mode */
-  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+body.dark-theme{
+  --first-color-second: hsl(var(--hue-color), 30%, 12%);
+
   --title-color: hsl(var(--hue-color), 8%, 95%);
-  --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 28%, 12%);
-  --container-color: hsl(var(--hue-color), 29%, 16%);
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --text-color-light: hsl(var(--hue-color), 8%, 60%);
+
+  --input-color: hsl(var(--hue-color), 25%, 18%);
+  --body-color: hsl(var(--hue-color), 28%, 10%);
+  --container-color: hsl(var(--hue-color), 25%, 15%);
+
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 25%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 40%);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -526,7 +528,7 @@ img {
 }
 
 .skills__content{
-  background: #ffffff;
+   background: var(--container-color);
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.06);
@@ -721,7 +723,7 @@ img {
 }
 
 .AreasofExpertise__content {
-    background: #fff;
+    background: var(--container-color);
     padding: 2rem;
     font-size: 1.5 rem;
     border-radius: 1.25rem;
@@ -735,10 +737,13 @@ img {
 }
 
 .AreasofExpertise__content:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(91,194,216,.18);
 }
-
+.cert-gallery-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(91,194,216,.15);
+}
 .AreasofExpertise__icon {
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -824,7 +829,7 @@ img {
 .certifications-card{
     max-width: 1200px;
     margin: 4rem auto;
-    background: #eef5f7;
+    background: var(--container-color);
     padding: 4rem 3rem;
     border-radius: 24px;
 }
@@ -951,7 +956,7 @@ img {
 /* Card */
 
 .cert-gallery-card{
-    background: #fff;
+    background: var(--container-color);
     border: 1px solid #E2E8F0;
     border-radius: 20px;
     overflow: hidden;
@@ -1631,4 +1636,25 @@ img {
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6{
+   color: var(--title-color);
+}
+
+body.dark-theme p,
+body.dark-theme span,
+body.dark-theme li{
+   color: var(--text-color);
+}
+body.dark-theme .skills__content,
+body.dark-theme .AreasofExpertise__content,
+body.dark-theme .certifications-card,
+body.dark-theme .cert-gallery-card{
+    border: 1px solid rgba(255,255,255,.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
