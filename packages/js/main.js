@@ -91,6 +91,29 @@ modalCloses.forEach((modalClose) => {
     });
 });
 
+const certCards = document.querySelectorAll('.cert-gallery-card');
+const lightbox = document.getElementById('certLightbox');
+const lightboxImg = document.querySelector('.cert-lightbox-image');
+const closeBtn = document.querySelector('.cert-lightbox-close');
+
+certCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const imgSrc = card.dataset.certSrc;
+        lightboxImg.src = imgSrc;
+        lightbox.classList.add('active');
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+});
+
+lightbox.addEventListener('click', (e) => {
+    if(e.target === lightbox){
+        lightbox.classList.remove('active');
+    }
+});
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiperPortfolio = new Swiper(".portfolio__container", {
   cssMode: true,
