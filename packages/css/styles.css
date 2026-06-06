@@ -869,87 +869,143 @@ img {
 
 /*==================== CERTIFICATE GALLERY ====================*/
 
-.cert-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
+#certifications{
+    padding: 6rem 0;
 }
 
-.cert-gallery-card {
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 18px;
-    overflow: hidden;
+#certifications .container{
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+/* Header */
+
+.section-header{
     text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    margin-bottom: 4rem;
 }
 
-.cert-gallery-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-}
-
-.cert-gallery-image-wrapper {
-    height: 220px;
-    padding: 1.5rem;
-    background: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cert-gallery-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.cert-gallery-caption {
-    padding: 1.5rem 1rem;
-}
-
-.cert-gallery-caption h3 {
-    font-size: 1.5rem;
+.section-subtitle{
+    display: inline-block;
+    font-size: 0.9rem;
     font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 0.75rem;
-}
-
-.cert-gallery-caption p {
-    font-size: 1.1rem;
-    color: #64748b;
-    line-height: 1.6;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-subtitle {
-    display: block;
-    color: #0ea5b7;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #5BC2D8;
     margin-bottom: 1rem;
 }
 
-.section-title {
-    font-size: 4rem;
-    font-weight: 800;
-    color: #0f172a;
-    margin-bottom: 1.5rem;
+.section-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
 }
 
-.section-description {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.3rem;
+.section-description{
+    max-width: 700px;
+    margin: auto;
+    font-size: 1rem;
     line-height: 1.8;
-    color: #64748b;
+    color: #64748B;
+}
+
+/* Grid */
+
+.cert-gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+/* Card */
+
+.cert-gallery-card{
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .35s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,.04);
+}
+
+.cert-gallery-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.10);
+}
+
+/* Image */
+
+.cert-gallery-image-wrapper{
+    height: 260px;
+    background: #F8FAFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.cert-gallery-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform .4s ease;
+}
+
+.cert-gallery-card:hover .cert-gallery-image{
+    transform: scale(1.04);
+}
+
+/* Caption */
+
+.cert-gallery-caption{
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.cert-gallery-caption h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0F172A;
+    margin-bottom: .5rem;
+    line-height: 1.4;
+}
+
+.cert-gallery-caption p{
+    font-size: 0.95rem;
+    color: #64748B;
+    line-height: 1.6;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 992px){
+
+    .cert-gallery-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+
+    .cert-gallery-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .section-title{
+        font-size: 2rem;
+    }
+
+    .cert-gallery-image-wrapper{
+        height: 220px;
+    }
 }
 
 /*==================== LIGHTBOX ====================*/
