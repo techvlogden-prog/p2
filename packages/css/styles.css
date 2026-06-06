@@ -889,7 +889,7 @@ img {
 }
 
 .cert-gallery-image-wrapper {
-    height: 220px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -916,6 +916,7 @@ img {
 .cert-gallery-caption p {
     color: #6c757d;
 }
+
 
 /*==================== LIGHTBOX ====================*/
 
@@ -961,6 +962,8 @@ img {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+
 /*==================== PORTFOLIO ====================*/
 .portfolio__container {
   overflow: initial;
