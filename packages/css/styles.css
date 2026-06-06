@@ -1262,13 +1262,7 @@ img {
 body.dark-theme .footer__bg{
     background:#071B24;
 }
-.footer__title,
-.footer__subtitle,
-.footer__link,
-.footer__social,
-.footer__copy{
-    color:#FFFFFF;
-}
+
 .footer__title {
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-25);
