@@ -821,102 +821,220 @@ img {
 
 /*==================== BOARD CERTIFICATIONS ====================*/
 
-.certifications-card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 3rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    margin-bottom: 4rem;
+.certifications-card{
+    max-width: 1200px;
+    margin: 4rem auto;
+    background: #eef5f7;
+    padding: 4rem 3rem;
+    border-radius: 24px;
 }
 
-.cert-grid {
+.cert-title{
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 3rem;
+}
+
+.cert-grid{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
+    gap: 3rem;
 }
 
-.cert-column {
+.cert-column{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 
-.cert-item {
+.cert-item{
     display: flex;
     align-items: flex-start;
     gap: 1rem;
 }
 
-.cert-dot {
+.cert-dot{
     width: 12px;
     height: 12px;
+    background: #3db5c8;
     border-radius: 50%;
-    background: #5BC2D8;
     margin-top: 10px;
     flex-shrink: 0;
 }
 
-.cert-content h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
+.cert-content h4{
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.5;
     margin-bottom: .5rem;
 }
 
-.cert-content span {
-    color: #6c757d;
-    line-height: 1.6;
+.cert-content span{
+    display: block;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #64748b;
 }
 
+/* Responsive */
+
+@media screen and (max-width:768px){
+
+    .cert-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .certifications-card{
+        padding: 2rem;
+    }
+
+    .cert-title{
+        font-size: 1.8rem;
+    }
+}
 /*==================== CERTIFICATE GALLERY ====================*/
 
-.cert-gallery-grid {
+#certifications{
+    padding: 6rem 0;
+}
+
+#certifications .container{
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+/* Header */
+
+.section-header{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-subtitle{
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #5BC2D8;
+    margin-bottom: 1rem;
+}
+
+.section-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.section-description{
+    max-width: 700px;
+    margin: auto;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #64748B;
+}
+
+/* Grid */
+
+.cert-gallery-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
-.cert-gallery-card {
+/* Card */
+
+.cert-gallery-card{
     background: #fff;
-    border-radius: 16px;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,.08);
     cursor: pointer;
-    transition: .3s;
+    transition: all .35s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,.04);
 }
 
-.cert-gallery-card:hover {
-    transform: translateY(-8px);
+.cert-gallery-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.10);
 }
 
-.cert-gallery-image-wrapper {
-    height: 180px;
-    overflow: hidden;
-}
+/* Image */
 
-.cert-gallery-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .4s;
-}
-
-.cert-gallery-card:hover .cert-gallery-image {
-    transform: scale(1.05);
-}
-
-.cert-gallery-caption {
+.cert-gallery-image-wrapper{
+    height: 260px;
+    background: #F8FAFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
 
-.cert-gallery-caption h3 {
-    font-size: 1.1rem;
+.cert-gallery-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform .4s ease;
+}
+
+.cert-gallery-card:hover .cert-gallery-image{
+    transform: scale(1.04);
+}
+
+/* Caption */
+
+.cert-gallery-caption{
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.cert-gallery-caption h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0F172A;
     margin-bottom: .5rem;
+    line-height: 1.4;
 }
 
-.cert-gallery-caption p {
-    color: #6c757d;
+.cert-gallery-caption p{
+    font-size: 0.95rem;
+    color: #64748B;
+    line-height: 1.6;
 }
 
+/* Responsive */
+
+@media screen and (max-width: 992px){
+
+    .cert-gallery-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+
+    .cert-gallery-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .section-title{
+        font-size: 2rem;
+    }
+
+    .cert-gallery-image-wrapper{
+        height: 220px;
+    }
+}
 
 /*==================== LIGHTBOX ====================*/
 
