@@ -1250,10 +1250,25 @@ img {
 }
 
 .footer__bg {
-  background-color: var(--first-color-second);
+  background:#0F172A;
   padding: 2rem 0 3rem;
 }
+/* Light Theme */
+.footer__bg{
+    background:#0F172A;
+}
 
+/* Dark Theme */
+body.dark-theme .footer__bg{
+    background:#071B24;
+}
+.footer__title,
+.footer__subtitle,
+.footer__link,
+.footer__social,
+.footer__copy{
+    color:#FFFFFF;
+}
 .footer__title {
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-25);
