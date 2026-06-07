@@ -979,6 +979,25 @@ body.dark-theme .personality__container p,
 body.dark-theme .personality__container span {
     color: #CBD5E1 !important;
 }
+body.dark-theme .personality__card {
+    background: rgba(255,255,255,0.05);
+}
+
+body.dark-theme .personality__card h4 {
+    color: #FFFFFF !important;
+}
+
+body.dark-theme .personality__card p {
+    color: #CBD5E1 !important;
+}
+body.dark-theme .section__title{
+    color:#FFFFFF !important;
+}
+
+body.dark-theme .section__subtitle{
+    color:#5BC2D8 !important;
+}
+
 /*==================== CERTIFICATE GALLERY ====================*/
 
 #certifications{
