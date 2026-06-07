@@ -1,3 +1,5 @@
+"use strict";
+console.log("main.js loaded successfully");
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
@@ -36,7 +38,7 @@ const skillsContent = document.getElementsByClassName("skills__content"),
 function toggleSkills() {
   let itemClass = this.parentNode.className;
 
-  for (i = 0; i < skillsContent.length; i++) {
+  for (let i = 0; i < skillsContent.length; i++)  {
     skillsContent[i].className = "skills__content skills__close";
   }
   if (itemClass === "skills__content skills__close") {
@@ -91,69 +93,30 @@ modalCloses.forEach((modalClose) => {
     });
 });
 
-const certCards = document.querySelectorAll('.cert-gallery-card');
-const lightbox = document.getElementById('certLightbox');
-const lightboxImg = document.querySelector('.cert-lightbox-image');
-const closeBtn = document.querySelector('.cert-lightbox-close');
+const certCards = document.querySelectorAll(".cert-gallery-card");
+const lightbox = document.getElementById("certLightbox");
+const lightboxImg = document.querySelector(".cert-lightbox-image");
+const closeBtn = document.querySelector(".cert-lightbox-close");
 
-certCards.forEach(card => {
-    card.addEventListener('click', () => {
-        const imgSrc = card.dataset.certSrc;
-        lightboxImg.src = imgSrc;
-        lightbox.classList.add('active');
+if (lightbox && lightboxImg && closeBtn) {
+  certCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      lightboxImg.src = card.dataset.certSrc;
+      lightbox.classList.add("active");
     });
-});
+  });
 
-closeBtn.addEventListener('click', () => {
-    lightbox.classList.remove('active');
-});
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
 
-lightbox.addEventListener('click', (e) => {
-    if(e.target === lightbox){
-        lightbox.classList.remove('active');
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("active");
     }
-});
+  });
+}
 
-/*==================== PORTFOLIO SWIPER  ====================*/
-let swiperPortfolio = new Swiper(".portfolio__container", {
-  cssMode: true,
-  loop: true,
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  /* mousewheel: true,
-  keyboard: true, */
-});
-
-/*==================== TESTIMONIAL ====================*/
-let swiperTestimonial = new Swiper(".testimonial__container", {
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 48,
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-
-  breakpoints: {
-    568: {
-      slidesPerView: 2,
-    },
-  },
-
-  /* mousewheel: true,
-  keyboard: true, */
-});
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll("section[id]");
@@ -164,7 +127,7 @@ function scrollActive() {
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
+    const sectionId = current.getAttribute("id");
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
@@ -203,33 +166,42 @@ const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
 const iconTheme = "uil-sun";
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem("selected-theme");
-const selectedIcon = localStorage.getItem("selected-icon");
+if (themeButton) {
+  const selectedTheme = localStorage.getItem("selected-theme");
+  const selectedIcon = localStorage.getItem("selected-icon");
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? "dark" : "light";
-const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
+  const getCurrentTheme = () =>
+    document.body.classList.contains(darkTheme)
+      ? "dark"
+      : "light";
 
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme
-  );
-  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
-    iconTheme
-  );
+  const getCurrentIcon = () =>
+    themeButton.classList.contains(iconTheme)
+      ? "uil-moon"
+      : "uil-sun";
+
+  if (selectedTheme) {
+    document.body.classList[
+      selectedTheme === "dark" ? "add" : "remove"
+    ](darkTheme);
+
+    themeButton.classList[
+      selectedIcon === "uil-moon" ? "add" : "remove"
+    ](iconTheme);
+  }
+
+  themeButton.addEventListener("click", () => {
+    document.body.classList.toggle(darkTheme);
+    themeButton.classList.toggle(iconTheme);
+
+    localStorage.setItem(
+      "selected-theme",
+      getCurrentTheme()
+    );
+
+    localStorage.setItem(
+      "selected-icon",
+      getCurrentIcon()
+    );
+  });
 }
-
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener("click", () => {
-  // Add or remove the dark / icon theme
-  document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
-  localStorage.setItem("selected-theme", getCurrentTheme());
-  localStorage.setItem("selected-icon", getCurrentIcon());
-});
