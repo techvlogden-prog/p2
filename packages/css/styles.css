@@ -870,11 +870,11 @@ img {
 }
 
 .cert-content h4{
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #0f172a;
     line-height: 1.5;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .cert-content span{
@@ -1672,23 +1672,4 @@ body.dark-theme #certifications .section-subtitle{
 body.dark-theme #certifications .section-description{
     color: #CBD5E1 !important;
     opacity: 1 !important;
-}
-/* ===== Areas of Expertise Modal Fix ===== */
-
-body.dark-theme .AreasofExpertise__modal-content{
-    background: #ffffff !important;
-}
-
-body.dark-theme .AreasofExpertise__modal-title{
-    color: #0F172A !important;
-    opacity: 1 !important;
-}
-
-body.dark-theme .AreasofExpertise__modal-service p{
-    color: #475569 !important;
-    opacity: 1 !important;
-}
-
-body.dark-theme .AreasofExpertise__modal-icon{
-    color: #0EA5E9 !important;
 }
