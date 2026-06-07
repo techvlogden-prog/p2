@@ -824,82 +824,109 @@ img {
   pointer-events: auto;
 }
 
-/*==================== BOARD CERTIFICATIONS ====================*/
+/*==================== PERSONALITY PROFILE ====================*/
 
-.certifications-card{
-    max-width: 1000px;
-    margin: 2rem auto;
-    background: var(--container-color);
-    padding: 4rem 3rem;
-    border-radius: 24px;
+.personality__container{
+    background: linear-gradient(
+        135deg,
+        rgba(15,23,42,.95),
+        rgba(30,41,59,.95)
+    );
+    padding: 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
 }
 
-.cert-title{
-    text-align: center;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 3rem;
+.personality__header{
+    text-align:center;
+    margin-bottom:3rem;
 }
 
-.cert-grid{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 3rem;
+.personality__icon{
+    font-size:3rem;
+    color:#38BDF8;
+    margin-bottom:1rem;
 }
 
-.cert-column{
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+.personality__header h3{
+    font-size:2.5rem;
+    color:#ffffff;
+    margin-bottom:1rem;
 }
 
-.cert-item{
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+.personality__header p{
+    color:rgba(255,255,255,.75);
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
 }
 
-.cert-dot{
-    width: 12px;
-    height: 12px;
-    background: #3db5c8;
-    border-radius: 50%;
-    margin-top: 10px;
-    flex-shrink: 0;
+.personality__cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1.5rem;
+    margin-bottom:3rem;
 }
 
-.cert-content h4{
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #0f172a;
-    line-height: 1.5;
-    margin-bottom: .5rem;
+.personality__card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:1rem;
+    padding:2rem;
+    text-align:center;
+    transition:.3s;
 }
 
-.cert-content span{
-    display: block;
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #64748b;
+.personality__card:hover{
+    transform:translateY(-8px);
 }
 
-/* Responsive */
+.personality__card-icon{
+    font-size:2rem;
+    color:#38BDF8;
+    margin-bottom:1rem;
+}
+
+.personality__card h4{
+    color:#ffffff;
+    margin-bottom:.75rem;
+}
+
+.personality__card p{
+    color:rgba(255,255,255,.75);
+    line-height:1.6;
+}
+
+.personality__traits{
+    display:grid;
+    gap:1rem;
+}
+
+.trait{
+    display:flex;
+    justify-content:space-between;
+    padding:1rem 1.5rem;
+    background:rgba(255,255,255,.05);
+    border-radius:.75rem;
+    color:#ffffff;
+    font-weight:500;
+}
 
 @media screen and (max-width:768px){
 
-    .cert-grid{
-        grid-template-columns: 1fr;
+    .personality__container{
+        padding:2rem;
     }
 
-    .certifications-card{
-        padding: 2rem;
+    .personality__cards{
+        grid-template-columns:1fr;
     }
 
-    .cert-title{
-        font-size: 1.8rem;
+    .personality__header h3{
+        font-size:2rem;
     }
 }
+
 /*==================== CERTIFICATE GALLERY ====================*/
 
 #certifications{
