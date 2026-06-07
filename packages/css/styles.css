@@ -939,123 +939,15 @@ body.dark-theme .AreasofExpertise__modal-icon{
     }
 }
 
-/*==================== PROFESSIONAL PROFILE ====================*/
-
-.personality__container{
-    background:#fff;
-    border-radius:2rem;
-    padding:4rem;
-    border:1px solid rgba(0,0,0,.06);
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-}
-
-.personality__header{
-    text-align:center;
-    margin-bottom:3rem;
-}
-
-.personality__icon{
-    font-size:3rem;
-    color:var(--first-color);
-    margin-bottom:1rem;
-}
-
-.personality__header h3{
-    font-size:2.2rem;
-    font-weight:700;
-    color:#0F172A;
-    margin-bottom:1rem;
-}
-
-.personality__header p{
-    max-width:750px;
-    margin:auto;
-    line-height:1.9;
-    color:#64748B;
-}
-
-.personality__cards{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1.5rem;
-    margin-bottom:3rem;
-}
-
-.personality__card{
-    background:#F8FAFC;
-    border:1px solid #E2E8F0;
-    border-radius:1.25rem;
-    padding:2rem;
-    text-align:center;
-    transition:.3s ease;
-}
-
-.personality__card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 12px 25px rgba(0,0,0,.08);
-}
-
-.personality__card-icon{
-    font-size:2rem;
-    color:var(--first-color);
-    margin-bottom:1rem;
-}
-
-.personality__card h4{
-    color:#0F172A;
-    font-size:1.1rem;
-    margin-bottom:.75rem;
-    font-weight:600;
-}
-
-.personality__card p{
-    color:#475569;
-    line-height:1.8;
-    font-size:.95rem;
-}
-
-/* Professional Traits */
-
-.traits__section{
-    text-align:center;
-}
-
-.traits__section h4{
-    color:#0F172A;
-    font-size:1.3rem;
-    margin-bottom:1.5rem;
-}
-
-.traits__grid{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:1rem;
-}
-
-.trait__badge{
-    padding:.75rem 1.25rem;
-    border-radius:999px;
-    background:#F1F5F9;
-    color:#334155;
-    border:1px solid #E2E8F0;
-    font-size:.9rem;
-    font-weight:500;
-}
-
 /*==================== DARK MODE ====================*/
 
 body.dark-theme .personality__container{
-    background: linear-gradient(
-        135deg,
-        rgba(15,23,42,.95),
-        rgba(30,41,59,.95)
-    );
+    background: rgba(255,255,255,.03);
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,.08);
 
     box-shadow:
         0 8px 32px rgba(0,0,0,.25);
@@ -1071,32 +963,43 @@ body.dark-theme .personality__header p{
     color:#CBD5E1;
 }
 
+body.dark-theme .personality__icon{
+    color:#38BDF8;
+}
+
+/* Cards */
+
 body.dark-theme .personality__card{
     background: rgba(255,255,255,.04);
 
-    border: 1px solid rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.08);
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
+    box-shadow:none;
+
     transition:.3s;
-}body.dark-theme .personality__card:hover{
-    transform: translateY(-8px);
-
-    border-color: var(--first-color);
-
-    box-shadow:
-        0 10px 30px rgba(91,194,216,.15);
 }
 
+body.dark-theme .personality__card:hover{
+    transform:translateY(-8px);
+
+    border-color:#38BDF8;
+
+    box-shadow:
+        0 10px 30px rgba(56,189,248,.15);
+}
 
 body.dark-theme .personality__card h4{
     color:#FFFFFF;
 }
 
 body.dark-theme .personality__card p{
-    color:#E2E8F0;
+    color:#CBD5E1;
 }
+
+/* Professional Traits */
 
 body.dark-theme .traits__section h4{
     color:#FFFFFF;
@@ -1105,44 +1008,28 @@ body.dark-theme .traits__section h4{
 body.dark-theme .trait__badge{
     background: rgba(255,255,255,.04);
 
-    border:1px solid rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
 
     color:#E2E8F0;
+
+    transition:.3s;
 }
+
+body.dark-theme .trait__badge:hover{
+    border-color:#38BDF8;
+
+    transform:translateY(-3px);
+}
+
+/* Section Heading */
 
 body.dark-theme #personality .section__title{
     color:#FFFFFF;
 }
 
 body.dark-theme #personality .section__subtitle{
-    color:var(--first-color);
+    color:#38BDF8;
 }
-
-/*==================== RESPONSIVE ====================*/
-
-@media screen and (max-width:968px){
-
-    .personality__cards{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media screen and (max-width:768px){
-
-    .personality__container{
-        padding:2rem;
-    }
-
-    .personality__cards{
-        grid-template-columns:1fr;
-    }
-
-    .personality__header h3{
-        font-size:1.8rem;
-    }
-}
-```
-
 /*==================== CERTIFICATE GALLERY ====================*/
 
 #certifications{
