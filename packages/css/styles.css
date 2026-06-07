@@ -826,91 +826,15 @@ img {
 
 /*==================== PERSONALITY PROFILE ====================*/
 
-/* ================= PERSONALITY PROFILE ================= */
-
-/* LIGHT MODE DEFAULT */
 .personality__container{
-    background: linear-gradient(
-        135deg,
-        #ffffff,
-        #f8fafc
-    );
-
-    border:1px solid rgba(91,194,216,.15);
-    padding:4rem;
-    border-radius:2rem;
-
-    box-shadow:
-        0 20px 40px rgba(0,0,0,.06),
-        0 8px 16px rgba(0,0,0,.04);
-}
-
-.personality__header h3{
-    color:#0f172a;
-}
-
-.personality__header p{
-    color:#64748b;
-}
-
-.personality__card{
-    background:#ffffff;
-    border:1px solid #e2e8f0;
-}
-
-.personality__card h4{
-    color:#0f172a;
-}
-
-.personality__card p{
-    color:#64748b;
-}
-
-.trait{
-    background:#f8fafc;
-    color:#0f172a;
-    border:1px solid #e2e8f0;
-}
-/* ================= DARK MODE ================= */
-
-body.dark-theme .personality__container{
     background: linear-gradient(
         135deg,
         rgba(15,23,42,.95),
         rgba(30,41,59,.95)
     );
-
-    border:1px solid rgba(255,255,255,.08);
-}
-
-body.dark-theme .personality__header h3{
-    color:#ffffff !important;
-}
-
-body.dark-theme .personality__header p{
-    color:#cbd5e1 !important;
-}
-
-body.dark-theme .personality__card{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-}
-
-body.dark-theme .personality__card h4{
-    color:#ffffff !important;
-}
-
-body.dark-theme .personality__card p{
-    color:#cbd5e1 !important;
-}
-
-body.dark-theme .trait{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-}
-
-body.dark-theme .trait span{
-    color:#ffffff !important;
+    padding: 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
 }
 
 .personality__header{
@@ -1002,6 +926,7 @@ body.dark-theme .trait span{
         font-size:2rem;
     }
 }
+
 
 /*==================== CERTIFICATE GALLERY ====================*/
 
