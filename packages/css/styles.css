@@ -875,14 +875,13 @@ img {
     color: #ffffff;
     line-height: 1.5;
     margin-bottom: 1rem;
-    letter-spacing:-0.3px;
 }
 
 .cert-content span{
     display: block;
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color:rgba(255,255,255,.75);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #64748b;
 }
 
 /* Responsive */
