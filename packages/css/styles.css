@@ -942,32 +942,6 @@ img {
         0 20px 40px rgba(0,0,0,.06),
         0 8px 16px rgba(0,0,0,.04);
 }
-.personality__header h3{
-    color:#0f172a;
-}
-
-.personality__header p{
-    color:#64748b;
-}
-
-.personality__card{
-    background:#ffffff;
-    border:1px solid #e2e8f0;
-}
-
-.personality__card h4{
-    color:#0f172a;
-}
-
-.personality__card p{
-    color:#64748b;
-}
-
-.trait{
-    background:#f8fafc;
-    color:#0f172a;
-    border:1px solid #e2e8f0;
-}
 
 /*==================== CERTIFICATE GALLERY ====================*/
 
