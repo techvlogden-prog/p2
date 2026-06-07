@@ -626,6 +626,107 @@ img {
 .skills__open .skills__arrow {
   transform: rotate(-180deg);
 }
+/*==================== CORE COMPETENCIES ====================*/
+
+.competencies__container{
+    margin-top: 3rem;
+}
+
+.competencies__grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+}
+
+.competency__item{
+    background: var(--container-color);
+    border:1px solid rgba(91,194,216,.08);
+    border-radius:1.25rem;
+
+    padding:1.5rem;
+
+    display:flex;
+    align-items:center;
+    gap:1rem;
+
+    transition:.3s ease;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.competency__item:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(91,194,216,.15);
+
+    border-color:rgba(91,194,216,.25);
+}
+
+.competency__icon{
+    font-size:1.5rem;
+    color:var(--first-color);
+    flex-shrink:0;
+}
+
+.competency__item span{
+    font-size:1rem;
+    font-weight:600;
+    color:var(--title-color);
+    line-height:1.5;
+}
+
+/*==================== DARK MODE ====================*/
+
+body.dark-theme .competency__item{
+    background: var(--container-color);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.15);
+}
+
+body.dark-theme .competency__item:hover{
+    border-color:var(--first-color);
+
+    box-shadow:
+        0 15px 35px rgba(91,194,216,.18);
+}
+
+body.dark-theme .competency__item span{
+    color:#FFFFFF;
+}
+
+body.dark-theme #competencies .section__title{
+    color:#FFFFFF;
+}
+
+body.dark-theme #competencies .section__subtitle{
+    color:var(--first-color);
+}
+
+/*==================== RESPONSIVE ====================*/
+
+@media screen and (max-width:968px){
+
+    .competencies__grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media screen and (max-width:768px){
+
+    .competencies__grid{
+        grid-template-columns:1fr;
+    }
+
+    .competency__item{
+        padding:1.25rem;
+    }
+
+}
 
 /*==================== QUALIFICATION ====================*/
 .qualification__tabs {
