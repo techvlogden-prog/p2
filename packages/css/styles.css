@@ -818,7 +818,6 @@ body.dark-theme #competencies .section__subtitle{
 
 .AreasofExpertise__container{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
     gap:2rem;
     align-items:stretch;
 }
@@ -1024,9 +1023,8 @@ body.dark-theme .AreasofExpertise__modal-icon{
 @media screen and (max-width:768px){
 
     .AreasofExpertise__container{
-        grid-template-columns:1fr;
-    }
-
+    grid-template-columns:repeat(3,1fr);
+}
     .AreasofExpertise__content{
         min-height:auto;
     }
@@ -2086,7 +2084,7 @@ body.dark-theme #values .section__subtitle{
 }
 
 .footer__bg {
-  background-color: var(--first-color-second);
+  background:#0F172A;;
   padding: 2rem 0 3rem;
 }
 
@@ -2374,10 +2372,7 @@ body.dark-theme #values .section__subtitle{
     .qualification__sections {
       grid-template-columns: 0.5fr;
     }
-    .AreasofExpertise__container {
-      grid-template-columns: repeat(3, 218px);
-      justify-content: center;
-    }
+    
     .AreasofExpertise__icon {
       font-size: 2rem;
     }
@@ -2447,9 +2442,7 @@ body.dark-theme #values .section__subtitle{
   .home__social {
     transform: translateX(-6rem);
   }
-  .AreasofExpertise__container {
-    grid-template-columns: repeat(3, 238px);
-  }
+  
   .portfolio__content {
     column-gap: 5rem;
   }
