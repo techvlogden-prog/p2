@@ -1046,10 +1046,12 @@ body.dark-theme .AreasofExpertise__modal-icon{
 /*==================== DARK MODE ====================*/
 
 body.dark-theme .personality__container{
-     backdrop-filter: blur(12px);
+    background: rgba(255,255,255,.03);
+
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,.08);
 
     box-shadow:
         0 8px 32px rgba(0,0,0,.25);
@@ -1890,7 +1892,7 @@ body.dark-theme li{
 }
 body.dark-theme .skills__content,
 body.dark-theme .AreasofExpertise__content,
-body.dark-theme .personality__container,
+body.dark-theme .certifications-card,
 body.dark-theme .cert-gallery-card{
     border: 1px solid rgba(255,255,255,.05);
     box-shadow: 0 10px 30px rgba(0,0,0,.35);
