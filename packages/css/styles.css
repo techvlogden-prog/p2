@@ -1955,19 +1955,18 @@ body.dark-theme #swot .section__subtitle{
         padding:1.75rem;
     }
 }
-```
-```css
-/*==================== VALUES ====================*/
+
+/*==================== PROFESSIONAL VALUES ====================*/
 
 .values__container{
-    grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .values__card{
     background: var(--container-color);
 
-    padding: 2rem;
+    padding: 3rem;
 
     border-radius: 1.5rem;
 
@@ -1981,17 +1980,17 @@ body.dark-theme #swot .section__subtitle{
 }
 
 .values__card:hover{
-    transform: translateY(-8px);
+    transform: translateY(-6px);
 
     box-shadow:
-        0 20px 40px rgba(91,194,216,.15);
+        0 20px 40px rgba(91,194,216,.12);
 }
 
 .values__icon{
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
 
-    margin: 0 auto 1.25rem;
+    margin: 0 auto 1.5rem;
 
     display: flex;
     align-items: center;
@@ -2003,25 +2002,19 @@ body.dark-theme #swot .section__subtitle{
 }
 
 .values__icon i{
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--first-color);
 }
 
-.values__card h3{
-    color: var(--title-color);
+.values__text{
+    max-width: 700px;
+    margin: 0 auto;
 
-    font-size: 1.2rem;
-    font-weight: 600;
-
-    margin-bottom: 1rem;
-}
-
-.values__card p{
     color: var(--text-color);
 
-    line-height: 1.8;
+    line-height: 2;
 
-    font-size: .95rem;
+    font-size: 1rem;
 }
 
 /*==================== DARK MODE ====================*/
@@ -2035,18 +2028,7 @@ body.dark-theme .values__card{
         0 10px 30px rgba(0,0,0,.2);
 }
 
-body.dark-theme .values__card:hover{
-    border-color: rgba(91,194,216,.25);
-
-    box-shadow:
-        0 15px 35px rgba(91,194,216,.12);
-}
-
-body.dark-theme .values__card h3{
-    color: #FFFFFF;
-}
-
-body.dark-theme .values__card p{
+body.dark-theme .values__text{
     color: #CBD5E1;
 }
 
@@ -2056,6 +2038,20 @@ body.dark-theme #values .section__title{
 
 body.dark-theme #values .section__subtitle{
     color: var(--first-color);
+}
+
+/*==================== RESPONSIVE ====================*/
+
+@media screen and (max-width:768px){
+
+    .values__card{
+        padding: 2rem;
+    }
+
+    .values__text{
+        font-size: .95rem;
+        line-height: 1.8;
+    }
 }
 
 /*==================== RESPONSIVE ====================*/
