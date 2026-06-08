@@ -472,6 +472,60 @@ img {
   display: flex;
   justify-content: flex-start;
 }
+/*==================== IMPACT SNAPSHOT ====================*/
+
+.impact__container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1.5rem;
+}
+
+.impact__card{
+    background:var(--container-color);
+
+    padding:2rem;
+
+    border-radius:1.5rem;
+
+    text-align:center;
+
+    border:1px solid rgba(91,194,216,.08);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    transition:.35s;
+}
+
+.impact__card:hover{
+    transform:translateY(-8px);
+}
+
+.impact__card h3{
+    font-size:2.5rem;
+    color:var(--first-color);
+
+    margin-bottom:.5rem;
+}
+
+.impact__card span{
+    color:var(--text-color);
+    font-weight:500;
+}
+
+body.dark-theme .impact__card{
+    border:1px solid rgba(255,255,255,.06);
+}
+
+body.dark-theme .impact__card span{
+    color:#CBD5E1;
+}
+
+@media screen and (max-width:768px){
+
+    .impact__container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
 
 /*==================== SKILLS ====================*/
 
@@ -2023,7 +2077,73 @@ body.dark-theme #values .section__subtitle{
         padding: 1.75rem;
     }
 }
-```
+/*==================== CAREER VISION ====================*/
+
+.vision__container{
+    max-width:900px;
+}
+
+.vision__content{
+    background:var(--container-color);
+
+    padding:3rem;
+
+    border-radius:2rem;
+
+    text-align:center;
+
+    border:1px solid rgba(91,194,216,.08);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.vision__content h3{
+    color:var(--title-color);
+
+    font-size:1.8rem;
+
+    margin-bottom:1rem;
+}
+
+.vision__content p{
+    color:var(--text-color);
+
+    line-height:1.9;
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+.vision__goals{
+    margin-top:2rem;
+
+    display:grid;
+
+    gap:1rem;
+}
+
+.goal{
+    background:rgba(91,194,216,.08);
+
+    padding:1rem;
+
+    border-radius:1rem;
+
+    font-weight:500;
+}
+
+body.dark-theme .goal{
+    background:rgba(91,194,216,.12);
+}
+
+body.dark-theme .vision__content h3{
+    color:#FFFFFF;
+}
+
+body.dark-theme .vision__content p{
+    color:#CBD5E1;
+}
 
 
 /*==================== CONTACT ME ====================*/
