@@ -1450,6 +1450,37 @@ RESPONSIVE
     .learning__gallery img{
         height:75px;
     }
+}/* UNICEF Premium Hover */
+
+.unicef__card:hover{
+    transform:translateY(-12px);
+
+    border-color:rgba(59,130,246,.3);
+
+    box-shadow:
+    0 25px 60px rgba(59,130,246,.20);
+}
+
+.unicef__card:hover .unicef__hero{
+    transform:scale(1.15) rotate(10deg);
+}
+
+.unicef__card:hover .course__item{
+    transform:translateX(8px);
+
+    background:rgba(59,130,246,.08);
+}
+
+.unicef__card:hover .certificate__title{
+    color:#3b82f6;
+}
+
+.unicef__hero{
+    transition:.4s ease;
+}
+
+.course__item{
+    transition:.3s ease;
 }
 /*==================== PROFESSIONAL PROFILE ====================*/
 
