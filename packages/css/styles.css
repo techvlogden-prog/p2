@@ -1459,10 +1459,6 @@ RESPONSIVE
     0 25px 60px rgba(168,85,247,.18);
 }
 
-.unicef__card:hover .unicef__hero{
-    transform:scale(1.15) rotate(10deg);
-}
-
 .unicef__card:hover .course__item{
     transform:translateX(8px);
 
