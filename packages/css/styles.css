@@ -1092,57 +1092,47 @@ body.dark-theme .AreasofExpertise__modal-icon{
 }
 /* Professional Stats */
 
-.certifications__stats{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:1rem;
-    margin:2rem 0 3rem;
-}
-
-.stat__card{
-    text-align:center;
-    padding:1.5rem;
-    border-radius:1rem;
-    background:rgba(255,255,255,.03);
-    border:1px solid rgba(255,255,255,.05);
-}
-
-.stat__card h3{
-    color:var(--first-color);
-    font-size:1.75rem;
-    margin-bottom:.25rem;
-}
-
-.certificate__header{
-    display:flex;
-    align-items:center;
-    gap:.75rem;
-    margin-bottom:1rem;
-    color:var(--first-color);
+.certificate__badge{
+    display:inline-block;
+    padding:.4rem .9rem;
+    border-radius:999px;
+    font-size:.75rem;
     font-weight:600;
+    margin-bottom:1rem;
 }
 
-.certificate__header i{
-    font-size:1.2rem;
+.verified{
+    background:rgba(34,197,94,.15);
+    color:#22c55e;
 }
 
-.learning__gallery{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:.75rem;
+.pathway{
+    background:rgba(59,130,246,.15);
+    color:#60a5fa;
+}
+
+.series{
+    background:rgba(168,85,247,.15);
+    color:#c084fc;
+}
+
+.certificate__preview{
     margin-top:1.5rem;
 }
 
-.learning__gallery a{
-    display:block;
+.certificate__preview img{
+    width:100%;
+    max-height:180px;
+    object-fit:cover;
+    border-radius:1rem;
 }
 
 .learning__gallery img{
     width:100%;
-    height:100px;
+    height:90px;
     object-fit:cover;
     border-radius:.75rem;
-    transition:.35s;
+    transition:.3s;
 }
 
 .learning__gallery img:hover{
@@ -1156,7 +1146,6 @@ body.dark-theme .AreasofExpertise__modal-icon{
 .certificate__content{
     padding:1.5rem;
 }
-
 
 
 /*==================== PROFESSIONAL PROFILE ====================*/
