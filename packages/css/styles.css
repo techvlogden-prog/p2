@@ -1456,13 +1456,14 @@ RESPONSIVE
     transform:translateY(-12px);
 
     box-shadow:
-    0 25px 60px rgba(168,85,247,.18);
+    0 25px 60px rgba(79, 62, 94, 0.18);
 }
 
-.unicef__card:hover .course__item{
-    transform:translateX(8px);
-
+.unicef__card:hover .unicef__hero{
+    transform:scale(1.15) rotate(10deg);
 }
+
+
 
 
 .course__item{
