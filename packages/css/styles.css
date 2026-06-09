@@ -1092,53 +1092,92 @@ body.dark-theme .AreasofExpertise__modal-icon{
 }
 /* Professional Stats */
 
-/* Featured Card */
-.verified__gallery img{
-     width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:top;
+/*========================================
+PROFESSIONAL QUALIFICATIONS
+========================================*/
 
-    border-radius:1rem;
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
-    border:2px solid transparent;
-}
-
-.certificate__featured{
+.certificate__card{
+    background:var(--container-color);
+    border-radius:1.5rem;
     padding:2rem;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.35s ease;
+    height:100%;
+    display:flex;
+    flex-direction:column;
 }
 
-/* Header */
+.certificate__card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(91,194,216,.12);
+}
+
+/*========================================
+HEADER
+========================================*/
 
 .certificate__header{
     margin-bottom:1rem;
 }
 
 .certificate__title{
-    font-size:1.6rem;
+    font-size:1.35rem;
     font-weight:700;
+    line-height:1.4;
     margin-bottom:.5rem;
+    color:var(--title-color);
 }
 
 .certificate__issuer{
-    font-size:1rem;
+    display:block;
     color:var(--first-color);
+    font-size:.95rem;
     font-weight:600;
+    margin-bottom:.75rem;
 }
 
-/* Description */
+/*========================================
+DESCRIPTION
+========================================*/
 
 .certificate__description{
-    font-size:1rem;
+    font-size:.95rem;
     line-height:1.8;
-    margin:1.25rem 0;
+    margin-bottom:1.5rem;
+    color:var(--text-color);
 }
 
-/* Skills */
+/*========================================
+BADGES
+========================================*/
+
+.certificate__badge{
+    display:inline-block;
+    padding:.4rem .9rem;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:600;
+    margin-bottom:1rem;
+}
+
+.verified{
+    background:rgba(34,197,94,.15);
+    color:#22c55e;
+}
+
+.pathway{
+    background:rgba(59,130,246,.15);
+    color:#60a5fa;
+}
+
+.series{
+    background:rgba(168,85,247,.15);
+    color:#c084fc;
+}
+
+/*========================================
+SKILLS
+========================================*/
 
 .certificate__skills{
     display:flex;
@@ -1148,23 +1187,25 @@ body.dark-theme .AreasofExpertise__modal-icon{
 }
 
 .certificate__skills span{
-    padding:.55rem 1rem;
+    padding:.5rem .9rem;
     border-radius:999px;
 
-    background:rgba(91,194,216,.12);
+    background:rgba(91,194,216,.10);
 
     color:var(--first-color);
 
-    font-size:.85rem;
+    font-size:.8rem;
     font-weight:600;
 }
 
-/* Course Items */
+/*========================================
+COURSES
+========================================*/
 
 .learning__courses{
     display:grid;
     gap:.75rem;
-    margin-bottom:2rem;
+    margin-bottom:1.5rem;
 }
 
 .course__item{
@@ -1172,36 +1213,75 @@ body.dark-theme .AreasofExpertise__modal-icon{
     align-items:center;
     gap:.75rem;
 
-    padding:1rem;
+    padding:.9rem 1rem;
 
     border-radius:.8rem;
 
-    background:rgba(91,194,216,.06);
+    background:rgba(91,194,216,.05);
 
-    font-size:1rem;
-    font-weight:500;
+    font-size:.9rem;
+
+    transition:.3s;
+}
+
+.course__item:hover{
+    background:rgba(91,194,216,.10);
 }
 
 .course__item i{
     color:#22c55e;
-    font-size:1.1rem;
+    font-size:1rem;
 }
 
-/* Gallery */
+/*========================================
+DHIS2 PREVIEW
+========================================*/
 
-.learning__gallery{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1rem;
+.certificate__preview{
+    margin-top:auto;
 }
 
-.learning__gallery img{
+.certificate__preview img{
     width:100%;
-    height:100%;
+    height:110px;
+
     object-fit:cover;
     object-position:top;
 
     border-radius:1rem;
+
+    transition:.35s ease;
+}
+
+.certificate__preview img:hover{
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/*========================================
+UNICEF / UNIATHENA GALLERY
+========================================*/
+
+.learning__gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:.75rem;
+    margin-top:auto;
+}
+
+.learning__gallery a{
+    display:block;
+}
+
+.learning__gallery img{
+    width:100%;
+    height:90px;
+
+    object-fit:cover;
+    object-position:top;
+
+    border-radius:.8rem;
 
     cursor:pointer;
 
@@ -1211,26 +1291,59 @@ body.dark-theme .AreasofExpertise__modal-icon{
 }
 
 .learning__gallery img:hover{
-    transform:translateY(-6px);
+    transform:translateY(-4px);
 
     border-color:var(--first-color);
 
-    box-shadow:0 15px 30px rgba(0,0,0,.15);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-/* Responsive */
+/*========================================
+BUTTON
+========================================*/
+
+.certificate__button{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+
+    margin-top:1rem;
+
+    color:var(--first-color);
+    font-weight:600;
+}
+
+.certificate__button:hover{
+    gap:.8rem;
+}
+
+/*========================================
+RESPONSIVE
+========================================*/
 
 @media screen and (max-width:768px){
+
+    .certificate__card{
+        padding:1.5rem;
+    }
+
+    .certificate__title{
+        font-size:1.15rem;
+    }
 
     .learning__gallery{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .certificate__title{
-        font-size:1.3rem;
+    .learning__gallery img{
+        height:75px;
     }
 
+    .certificate__preview img{
+        height:90px;
+    }
 }
+
 /*==================== PROFESSIONAL PROFILE ====================*/
 
 .personality__container{
