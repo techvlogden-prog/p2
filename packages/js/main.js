@@ -206,20 +206,3 @@ if (themeButton) {
     );
   });
 }
-const track = document.querySelector('.certificate-track');
-const nextBtn = document.querySelector('.next');
-const prevBtn = document.querySelector('.prev');
-
-nextBtn.addEventListener('click', () => {
-track.scrollBy({
-left: 380,
-behavior: 'smooth'
-});
-});
-
-prevBtn.addEventListener('click', () => {
-track.scrollBy({
-left: -380,
-behavior: 'smooth'
-});
-});
