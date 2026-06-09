@@ -1573,34 +1573,48 @@ color: var(--first-color);
 
 .swot__container{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns:repeat(4,1fr);
     gap:1.5rem;
+    margin-top:3rem;
 }
 
 .swot__card{
     background:var(--container-color);
-    padding:1.8rem;
+    padding:2rem 1.5rem;
     border-radius:1.25rem;
+    text-align:center;
     border:1px solid rgba(255,255,255,.08);
     transition:.3s;
 }
 
 .swot__card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
 }
 
 .swot__card h3{
+    font-size:2.5rem;
     color:var(--first-color);
+    margin-bottom:.5rem;
+}
+
+.swot__card span{
+    display:block;
+    font-weight:600;
     margin-bottom:1rem;
 }
 
-.swot__card ul{
-    padding-left:1rem;
+.swot__card p{
+    font-size:.9rem;
+    line-height:1.7;
 }
 
-.swot__card li{
-    margin-bottom:.75rem;
-    line-height:1.7;
+/* Mobile */
+@media screen and (max-width:768px){
+
+    .swot__container{
+        grid-template-columns:1fr;
+    }
+
 }
 
 /*==================== PROFESSIONAL VALUES ====================*/
