@@ -1550,6 +1550,19 @@ font-weight:500;
 }
 
 /* Better Typography */
+.experience__item{
+    position:relative;
+
+    display:flex;
+
+    gap:2.5rem;
+
+    margin-bottom:4rem;
+}
+
+.experience__item:last-child{
+    margin-bottom:0;
+}
 
 .experience__title{
 font-size:1.25rem;
@@ -1561,6 +1574,13 @@ margin-bottom:.75rem;
 .experience__description{
 line-height:1.9;
 margin-bottom:1.25rem;
+}
+.experience__content{
+    padding:2.25rem;
+
+    background:var(--container-color);
+
+    border-radius:1.25rem;
 }
 
 /* Better Tags */
