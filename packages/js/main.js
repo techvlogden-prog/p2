@@ -116,34 +116,7 @@ if (lightbox && lightboxImg && closeBtn) {
     }
   });
 }
-const certificateButtons =
-document.querySelectorAll('.certificate__button');
 
-const certificateModals =
-document.querySelectorAll('.certificate__modal');
-
-const certificateClose =
-document.querySelectorAll('.certificate__modal-close');
-
-certificateButtons.forEach((button,index)=>{
-button.addEventListener('click',()=>{
-certificateModals[index].classList.add('active-modal');
-});
-});
-
-certificateClose.forEach((closeBtn,index)=>{
-closeBtn.addEventListener('click',()=>{
-certificateModals[index].classList.remove('active-modal');
-});
-});
-
-certificateModals.forEach((modal)=>{
-modal.addEventListener('click',(e)=>{
-if(e.target === modal){
-modal.classList.remove('active-modal');
-}
-});
-});
 
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
