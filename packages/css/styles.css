@@ -1157,17 +1157,7 @@ CERTIFICATION SHOWCASE
 CARD IDENTITIES
 ====================================*/
 
-.dhis2__card{
-    border-top:4px solid #22c55e;
-}
 
-.unicef__card{
-    border-top:4px solid #3b82f6;
-}
-
-.uniathena__card{
-    border-top:4px solid #a855f7;
-}
 
 /* Color Hover */
 
@@ -1456,14 +1446,17 @@ RESPONSIVE
     transform:translateY(-12px);
 
     box-shadow:
-    0 25px 60px rgba(79, 62, 94, 0.18);
+    0 25px 60px rgba(46, 38, 53, 0.18);
 }
 
 .unicef__card:hover .unicef__hero{
     transform:scale(1.15) rotate(10deg);
 }
 
+.unicef__card:hover .course__item{
+    transform:translateX(8px);
 
+}
 
 
 .course__item{
