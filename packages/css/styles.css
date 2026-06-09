@@ -1455,10 +1455,8 @@ RESPONSIVE
 .unicef__card:hover{
     transform:translateY(-12px);
 
-    border-color:rgba(59,130,246,.3);
-
     box-shadow:
-    0 25px 60px rgba(59,130,246,.20);
+    0 25px 60px rgba(168,85,247,.18);
 }
 
 .unicef__card:hover .unicef__hero{
@@ -1468,11 +1466,11 @@ RESPONSIVE
 .unicef__card:hover .course__item{
     transform:translateX(8px);
 
-    background:rgba(59,130,246,.08);
+    background:rgba(168,85,247,.08);
 }
 
 .unicef__card:hover .certificate__title{
-    color:#3b82f6;
+    color:#39383b;
 }
 
 .unicef__hero{
