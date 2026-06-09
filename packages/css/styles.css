@@ -1292,6 +1292,7 @@ GALLERY
 
 .learning__gallery{
     display:grid;
+    width:968px;
   
     grid-template-columns:repeat(2,1fr);
 
