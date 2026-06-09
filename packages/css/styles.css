@@ -1093,6 +1093,10 @@ body.dark-theme .AreasofExpertise__modal-icon{
 /* Professional Stats */
 
 /* Featured Card */
+.certificate__image{
+    height:140px;
+    overflow:hidden;
+}
 
 .certificate__featured{
     padding:2rem;
@@ -1183,9 +1187,9 @@ body.dark-theme .AreasofExpertise__modal-icon{
 
 .learning__gallery img{
     width:100%;
-    height:120px;
-
+    height:100%;
     object-fit:cover;
+    object-position:top;
 
     border-radius:1rem;
 
