@@ -214,26 +214,54 @@ document.querySelectorAll('.certificate__button');
 const certificateModals =
 document.querySelectorAll('.certificate__modal');
 
-const certificateClose =
+const certificateCloseButtons =
 document.querySelectorAll('.certificate__modal-close');
 
-certificateButtons.forEach((button,index)=>{
-button.addEventListener('click',()=>{
-certificateModals[index].classList.add('active-modal');
+console.log("Buttons Found:", certificateButtons.length);
+console.log("Modals Found:", certificateModals.length);
+
+certificateButtons.forEach((button, index) => {
+
+```
+button.addEventListener('click', () => {
+
+    console.log("Opening Modal:", index);
+
+    if (certificateModals[index]) {
+        certificateModals[index].classList.add('active-modal');
+    }
+
 });
+```
+
 });
 
-certificateClose.forEach((closeBtn,index)=>{
-closeBtn.addEventListener('click',()=>{
-certificateModals[index].classList.remove('active-modal');
+certificateCloseButtons.forEach((closeBtn, index) => {
+
+```
+closeBtn.addEventListener('click', () => {
+
+    if (certificateModals[index]) {
+        certificateModals[index].classList.remove('active-modal');
+    }
+
 });
+```
+
 });
 
-certificateModals.forEach((modal)=>{
-modal.addEventListener('click',(e)=>{
-if(e.target === modal){
-modal.classList.remove('active-modal');
-}
+certificateModals.forEach((modal) => {
+
+```
+modal.addEventListener('click', (e) => {
+
+    if (e.target === modal) {
+        modal.classList.remove('active-modal');
+    }
+
 });
+```
+
 });
-console.log("Certificate JS Loaded");
+
+console.log("Certificate JS Loaded Successfully");
