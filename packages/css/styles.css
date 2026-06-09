@@ -1093,10 +1093,12 @@ body.dark-theme .AreasofExpertise__modal-icon{
 /* Professional Stats */
 
 /*====================================
-CERTIFICATE CARD
+CERTIFICATION SHOWCASE
 ====================================*/
 
 .certificate__card{
+    position:relative;
+
     background:var(--container-color);
 
     padding:2rem;
@@ -1105,19 +1107,83 @@ CERTIFICATE CARD
 
     border:1px solid rgba(255,255,255,.08);
 
-    transition:.35s ease;
-
     display:flex;
     flex-direction:column;
 
     height:100%;
+
+    overflow:hidden;
+
+    transition:.45s ease;
 }
 
+/* Premium Hover */
+
 .certificate__card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
     box-shadow:
-    0 20px 40px rgba(91,194,216,.12);
+    0 25px 50px rgba(0,0,0,.12);
+}
+
+/* Light Sweep Effect */
+
+.certificate__card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
+
+    transition:.8s ease;
+}
+
+.certificate__card:hover::before{
+    left:150%;
+}
+
+/*====================================
+CARD IDENTITIES
+====================================*/
+
+.dhis2__card{
+    border-top:4px solid #22c55e;
+}
+
+.unicef__card{
+    border-top:4px solid #3b82f6;
+}
+
+.uniathena__card{
+    border-top:4px solid #a855f7;
+}
+
+/* Color Hover */
+
+.dhis2__card:hover{
+    box-shadow:
+    0 20px 50px rgba(34,197,94,.18);
+}
+
+.unicef__card:hover{
+    box-shadow:
+    0 20px 50px rgba(59,130,246,.18);
+}
+
+.uniathena__card:hover{
+    box-shadow:
+    0 20px 50px rgba(168,85,247,.18);
 }
 
 /*====================================
@@ -1136,15 +1202,39 @@ HERO ICON
 
     border-radius:50%;
 
-    background:rgba(91,194,216,.10);
+    transition:.45s ease;
+}
 
-    border:1px solid rgba(91,194,216,.15);
+.dhis2__hero{
+    background:rgba(34,197,94,.10);
+}
+
+.unicef__hero{
+    background:rgba(59,130,246,.10);
+}
+
+.uniathena__hero{
+    background:rgba(168,85,247,.10);
+}
+
+.dhis2__hero i{
+    color:#22c55e;
+}
+
+.unicef__hero i{
+    color:#3b82f6;
+}
+
+.uniathena__hero i{
+    color:#a855f7;
 }
 
 .certificate__hero i{
     font-size:2.5rem;
+}
 
-    color:var(--first-color);
+.certificate__card:hover .certificate__hero{
+    transform:scale(1.12) rotate(8deg);
 }
 
 /*====================================
@@ -1154,7 +1244,7 @@ BADGES
 .certificate__badge{
     display:inline-block;
 
-    padding:.45rem .9rem;
+    padding:.45rem 1rem;
 
     border-radius:999px;
 
@@ -1163,6 +1253,12 @@ BADGES
     font-weight:600;
 
     margin-bottom:1rem;
+
+    transition:.3s ease;
+}
+
+.certificate__card:hover .certificate__badge{
+    transform:translateY(-3px);
 }
 
 .verified{
@@ -1186,28 +1282,22 @@ HEADER
 
 .certificate__header{
     text-align:center;
-
     margin-bottom:1rem;
 }
 
 .certificate__title{
     font-size:1.35rem;
-
     font-weight:700;
-
+    line-height:1.4;
     margin-bottom:.5rem;
-
     color:var(--title-color);
 }
 
 .certificate__issuer{
     display:block;
-
     color:var(--first-color);
-
-    font-weight:600;
-
     font-size:.95rem;
+    font-weight:600;
 }
 
 /*====================================
@@ -1216,12 +1306,9 @@ DESCRIPTION
 
 .certificate__description{
     text-align:center;
-
     line-height:1.8;
-
-    margin-bottom:1.5rem;
-
     color:var(--text-color);
+    margin-bottom:1.5rem;
 }
 
 /*====================================
@@ -1230,13 +1317,9 @@ SKILLS
 
 .certificate__skills{
     display:flex;
-
     flex-wrap:wrap;
-
     justify-content:center;
-
-    gap:.75rem;
-
+    gap:.6rem;
     margin-bottom:1.5rem;
 }
 
@@ -1245,7 +1328,7 @@ SKILLS
 
     border-radius:999px;
 
-    background:rgba(91,194,216,.10);
+    background:rgba(91,194,216,.08);
 
     color:var(--first-color);
 
@@ -1260,17 +1343,13 @@ COURSES
 
 .learning__courses{
     display:grid;
-
     gap:.75rem;
-
     margin-bottom:1.5rem;
 }
 
 .course__item{
     display:flex;
-
     align-items:center;
-
     gap:.75rem;
 
     padding:.9rem 1rem;
@@ -1279,11 +1358,15 @@ COURSES
 
     background:rgba(91,194,216,.05);
 
-    font-size:.9rem;
+    transition:.3s ease;
 }
 
 .course__item i{
     color:#22c55e;
+}
+
+.certificate__card:hover .course__item{
+    transform:translateX(5px);
 }
 
 /*====================================
@@ -1292,32 +1375,28 @@ GALLERY
 
 .learning__gallery{
     display:grid;
-  
     grid-template-columns:repeat(2,1fr);
-
     gap:.75rem;
-
     margin-top:auto;
 }
 
 .learning__gallery img{
-    width: 100%;
-
-    height:100px;
+    width:100%;
+    height:90px;
 
     object-fit:cover;
-
-    object-position:middle;
+    object-position:top;
 
     border-radius:.75rem;
 
-    transition:.3s ease;
+    transition:.35s ease;
 }
 
 .learning__gallery img:hover{
-    transform:translateY(-4px);
+    transform:scale(1.04);
 
-    box-shadow:0 10px 20px rgba(0,0,0,.12);
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.12);
 }
 
 /*====================================
@@ -1327,9 +1406,8 @@ BUTTON
 .certificate__button{
     display:inline-flex;
 
-    align-items:center;
-
     justify-content:center;
+    align-items:center;
 
     gap:.5rem;
 
@@ -1338,6 +1416,12 @@ BUTTON
     font-weight:600;
 
     color:var(--first-color);
+
+    transition:.3s ease;
+}
+
+.certificate__button:hover{
+    gap:.8rem;
 }
 
 /*====================================
@@ -1363,6 +1447,9 @@ RESPONSIVE
         font-size:1.15rem;
     }
 
+    .learning__gallery img{
+        height:75px;
+    }
 }
 /*==================== PROFESSIONAL PROFILE ====================*/
 
