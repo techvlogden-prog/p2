@@ -263,3 +263,4 @@ modal.classList.remove('active-modal');
 }
 });
 });
+console.log("Certificate JS Loaded");
