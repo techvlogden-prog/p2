@@ -1292,6 +1292,7 @@ GALLERY
 
 .learning__gallery{
     display:grid;
+    object-position:middle;
 
     grid-template-columns:repeat(2,1fr);
 
@@ -1307,7 +1308,7 @@ GALLERY
 
     object-fit:cover;
 
-    object-position:top;
+    object-position:middle;
 
     border-radius:.75rem;
 
