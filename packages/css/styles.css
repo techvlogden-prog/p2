@@ -1448,121 +1448,36 @@ font-size:.8rem;
 /*==================== ACHIEVEMENTS ====================*/
 
 .achievements__container{
-grid-template-columns: repeat(3, 1fr);
-gap: 2rem;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:2rem;
+}
+
+.achievement__badge{
+display:inline-block;
+padding:.35rem .9rem;
+border-radius:999px;
+background:rgba(91,194,216,.12);
+color:var(--first-color);
+font-size:.75rem;
+font-weight:600;
+margin-bottom:1rem;
 }
 
 .achievements__card{
-background: var(--container-color);
-
-padding: 2rem;
-
-border-radius: 1.5rem;
-
-text-align: center;
-
-border: 1px solid rgba(91,194,216,.08);
-
-box-shadow: 0 10px 30px rgba(0,0,0,.06);
-
-transition: .35s ease;
-
+position:relative;
+background:var(--container-color);
+padding:2rem;
+border-radius:1.5rem;
+border:1px solid rgba(91,194,216,.08);
+transition:.35s ease;
 }
 
 .achievements__card:hover{
-transform: translateY(-8px);
-box-shadow:
-    0 20px 40px rgba(91,194,216,.15);
-
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(91,194,216,.12);
 }
 
-.achievements__icon{
-width: 70px;
-height: 70px;
-margin: 0 auto 1.25rem;
-
-display: flex;
-align-items: center;
-justify-content: center;
-
-border-radius: 50%;
-
-background: rgba(91,194,216,.12);
-
-}
-
-.achievements__icon i{
-font-size: 1.8rem;
-color: var(--first-color);
-}
-
-.achievements__title{
-font-size: 1.2rem;
-font-weight: 600;
-color: var(--title-color);
-margin-bottom: 1rem;}
-
-.achievements__description{
-color: var(--text-color);
-line-height: 1.8;font-size: .95rem;
-
-}
-
-/*==================== DARK MODE ====================*/
-
-body.dark-theme .achievements__card{
-background: var(--container-color);
-
-
-border: 1px solid rgba(255,255,255,.06);
-
-box-shadow:
-    0 10px 30px rgba(0,0,0,.2);
-
-
-}
-
-body.dark-theme .achievements__card:hover{
-border-color: rgba(91,194,216,.25);
-box-shadow:
-    0 15px 35px rgba(91,194,216,.12);
-
-}
-
-body.dark-theme .achievements__title{
-color: #FFFFFF;
-}
-
-body.dark-theme .achievements__description{
-color: #CBD5E1;
-}
-
-body.dark-theme #achievements .section__title{
-color: #FFFFFF;
-}
-
-body.dark-theme #achievements .section__subtitle{
-color: var(--first-color);
-}
-
-/*==================== RESPONSIVE ====================*/
-
-@media screen and (max-width: 1024px){
-.achievements__container{
-    grid-template-columns: repeat(2,1fr);}
-
-}
-
-@media screen and (max-width: 768px){
-.achievements__container{
-    grid-template-columns: 1fr;
-}
-
-.achievements__card{
-    padding: 1.75rem;
-}
-
-}
 /*==================== SWOT ANALYSIS ====================*/
 
 .swot__container{
