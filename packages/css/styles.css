@@ -1292,8 +1292,7 @@ GALLERY
 
 .learning__gallery{
     display:grid;
-    object-position:middle;
-
+  
     grid-template-columns:repeat(2,1fr);
 
     gap:.75rem;
