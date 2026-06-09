@@ -206,40 +206,20 @@ if (themeButton) {
     );
   });
 }
-/*==================== CERTIFICATE MODAL ====================*/
+const track = document.querySelector('.certificate-track');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
 
-const certificateButtons =
-document.querySelectorAll('.certificate__button');
+nextBtn.addEventListener('click', () => {
+track.scrollBy({
+left: 380,
+behavior: 'smooth'
+});
+});
 
-const certificateModals =
-document.querySelectorAll('.certificate__modal');
-
-const certificateCloseButtons =
-document.querySelectorAll('.certificate__modal-close');
-
-if(
-    certificateButtons.length &&
-    certificateModals.length
-){
-
-    certificateButtons.forEach((button,index)=>{
-
-        button.addEventListener('click',()=>{
-
-            certificateModals[index].classList.add('active-modal');
-
-        });
-
-    });
-
-    certificateCloseButtons.forEach((closeBtn,index)=>{
-
-        closeBtn.addEventListener('click',()=>{
-
-            certificateModals[index].classList.remove('active-modal');
-
-        });
-
-    });
-
-}
+prevBtn.addEventListener('click', () => {
+track.scrollBy({
+left: -380,
+behavior: 'smooth'
+});
+});
