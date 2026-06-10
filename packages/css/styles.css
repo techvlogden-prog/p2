@@ -1945,54 +1945,103 @@ body.dark-theme .vision__content p{
 }
 
 
-/*==================== CONTACT ME ====================*/
-.contact__container {
-  row-gap: 3rem;
+/*==================== CONTACT ====================*/
+
+.contact__container{
+    max-width:850px;
+    margin:auto;
 }
 
-.contact__information {
-  display: flex;
-  margin-bottom: var(--mb-2);
+.contact__card{
+    background:var(--container-color);
+
+    padding:3rem;
+
+    border-radius:2rem;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    transition:.4s ease;
 }
 
-.contact__icon {
-  font-size: 1.5rem;
-  color: var(--first-color);
-  margin-right: var(--mb-0-75);
+.contact__card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 20px 40px rgba(91,194,216,.12);
 }
 
-.content__title {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
+.contact__intro{
+    text-align:center;
+
+    margin-bottom:2.5rem;
 }
 
-.contact__subtitle {
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
+.contact__intro h3{
+    font-size:1.5rem;
+
+    margin-bottom:1rem;
 }
 
-.contact__content {
-  background-color: var(--input-color);
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem 0.25rem;
+.contact__intro p{
+    max-width:600px;
+
+    margin:auto;
+
+    line-height:1.8;
 }
 
-.contact__label {
-  font-size: var(--smaller-font-size);
-  color: var(--title-color);
+.contact__links{
+    display:grid;
+
+    gap:1rem;
 }
 
-.contact__input {
-  width: 100%;
-  background-color: var(--input-color);
-  color: var(--text-color);
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  border: none;
-  outline: none;
-  padding: 0.25rem 0.5rem 0.5rem 0;
+.contact__item{
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+    padding:1rem 1.25rem;
+
+    border-radius:1rem;
+
+    background:rgba(91,194,216,.05);
+
+    transition:.3s ease;
 }
 
+.contact__item:hover{
+    transform:translateX(8px);
+
+    background:rgba(91,194,216,.10);
+}
+
+.contact__item i{
+    font-size:1.6rem;
+
+    color:var(--first-color);
+}
+
+.contact__item span{
+    display:block;
+
+    font-weight:600;
+
+    color:var(--title-color);
+}
+
+.contact__item small{
+    color:var(--text-color);
+}
+
+.contact__item{
+    text-decoration:none;
+}
 /*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;
